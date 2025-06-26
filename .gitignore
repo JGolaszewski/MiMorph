@@ -175,5 +175,7 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Data folder
+# Ignored folders
 data/
+temp/
+
