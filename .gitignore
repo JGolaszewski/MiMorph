@@ -76,7 +76,9 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
+.jupyter/
+.virtual_documents/
 
 # IPython
 profile_default/
@@ -173,5 +175,8 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Data folder
+# Ignored folders
 data/
+temp/
+old/
+
