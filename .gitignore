@@ -178,4 +178,5 @@ cython_debug/
 # Ignored folders
 data/
 temp/
+old/
 
