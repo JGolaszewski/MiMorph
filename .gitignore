@@ -175,8 +175,14 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# Ignore pkl and json files
+*.json
+*.pkl
+*.dat
+*.mrxs
+
 # Ignored folders
-data/
+data/WSI_scans/
 temp/
 old/
 
