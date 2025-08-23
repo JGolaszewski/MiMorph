@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MiMorph"
+version = "0.1.0"
+description = "Tissue registration package"
+authors = [
+  { name="Jędrzej Gołaszewski", email="golaszewskijedrzej@gmail.com" }
+]
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "pywavelets",
+    "SimpleITK",
+    "scikit-learn",
+    "scikit-image",
+    "matplotlib"
+]
