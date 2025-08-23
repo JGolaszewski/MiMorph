@@ -18,3 +18,6 @@ dependencies = [
     "scikit-image",
     "matplotlib"
 ]
+
+[tool.setuptools.packages.find]
+where = ["tissue_merging_registration"]
