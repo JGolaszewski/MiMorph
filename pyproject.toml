@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -19,5 +19,5 @@ dependencies = [
     "matplotlib"
 ]
 
-[tool.setuptools.packages.find]
-where = ["tissue_merging_registration"]
+[tool.setuptools]
+packages = ["mimorph"]
