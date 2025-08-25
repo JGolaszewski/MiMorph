@@ -176,7 +176,6 @@ cython_debug/
 .pypirc
 
 # Ignore pkl and json files
-*.json
 *.pkl
 *.dat
 *.mrxs

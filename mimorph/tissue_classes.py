@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 class Tissue:
     def __init__(self, he, rgb, mask):
-        self.he = he
-        self.rgb = rgb
-        self.mask = mask
+        self.he = he.copy()
+        self.rgb = rgb.copy()
+        self.mask = mask.copy()
 
     @property
     def hem(self):
@@ -58,7 +58,7 @@ class Tissue:
 class Slide(UserList):
     def __init__(self, lod, filepath, thumbnail=None, tissues=None):
         self.lod = lod
-        self.thumbnail = thumbnail
+        self.thumbnail = thumbnail.copy()
         self.filepath = filepath
         
         if tissues is None:

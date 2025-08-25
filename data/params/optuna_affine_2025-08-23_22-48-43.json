@@ -1,0 +1,29 @@
+{
+    "score": [
+        0.01965084858238697,
+        0.48451263352083185,
+        0.6964708101821436
+    ],
+    "params": {
+        "levels": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "filter__mutual": false,
+        "filter__lowes_ratio": 0.8099999999999999,
+        "filter__weight_function": "power",
+        "filter__sample_prc": 0.8,
+        "homography__ransacReprojThreshold": 2.6,
+        "homography__refineIters": 2,
+        "BRISK_thresh": 33,
+        "BRISK_octaves": 4,
+        "BRISK_patternScale": 0.8500000000000001,
+        "feature_type": "BRISK",
+        "BF_normType": 6,
+        "BF_crossCheck": false,
+        "matcher_type": "BF"
+    }
+}

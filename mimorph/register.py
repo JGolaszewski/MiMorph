@@ -58,7 +58,7 @@ class TissueAffineRegister(Register):
 
         return bior, masks
 
-    def _scale_kp(kp: list[cv2.KeyPoint], scale: float) -> list[cv2.KeyPoint]:
+    def _scale_kp(self, kp: list[cv2.KeyPoint], scale: float) -> list[cv2.KeyPoint]:
         scaled_kp = []
         for k in kp:
             new_k = cv2.KeyPoint(k.pt[0] * scale, k.pt[1] * scale, k.size * scale, k.angle, k.response, k.octave, k.class_id)
@@ -336,7 +336,8 @@ class TissueAffineRegister(Register):
                 verbose=verbose,
                 return_params=return_params
             )
-            params['sample'] = sample_params
+            if return_params:
+                params['sample'] = sample_params
 
         return ret_matches, (ret_kp1, ret_des1), (ret_kp2, ret_des2), params
     
@@ -515,7 +516,7 @@ class TissueAffineRegister(Register):
         return params
 
     def __init__(self, param_json):
-        self.w_function = {
+        self._w_function = {
             'linear': self._linear,
             'power' : self._power 
         }
@@ -559,7 +560,7 @@ class TissueAffineRegister(Register):
             if len(img.shape) < 3:
                 return warp(img, shape, H)
 
-            return np.stack([warp(img[...,i], shape, H) for i in range(img.shape[2])])
+            return np.dstack([warp(img[...,i], shape, H) for i in range(img.shape[2])])
         
         if ret_params:
             H, params = self.find_transform(tissue1, tissue2, ret_params)
@@ -577,7 +578,7 @@ class TissueAffineRegister(Register):
         else:
             return tissue_reg
         
-class NonAffineRegister(Register):
+class TissueNonAffineRegister(Register):
     def _mmi_register(
         self,
         img1: np.ndarray, img2: np.ndarray,
@@ -773,9 +774,9 @@ class NonAffineRegister(Register):
 
         hem = tissue1.hem, tissue2.hem
         eos = tissue1.eos, tissue2.eos
-        red = tissue1.rgb[0], tissue2.rgb[0]
-        green = tissue1.rgb[1], tissue2.rgb[1]
-        blue = tissue1.rgb[2], tissue2.rgb[2]
+        red = tissue1.rgb[...,0], tissue2.rgb[...,0]
+        green = tissue1.rgb[...,1], tissue2.rgb[...,1]
+        blue = tissue1.rgb[...,2], tissue2.rgb[...,2]
         mask = tissue1.mask.astype(np.uint8), tissue2.mask.astype(np.uint8)
 
         def transform(channel_list):
@@ -798,7 +799,7 @@ class NonAffineRegister(Register):
             if len(result) == 1:
                 return result[0]
             else:
-                return np.stack(result, axis=-1)
+                return np.dstack(result)
         
         return Tissue(
             he = transform([hem, eos]),
