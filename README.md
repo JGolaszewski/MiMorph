@@ -1,56 +1,58 @@
 # MiMorph
 
-MiMorph leverages feature extraction techniques to create smooth transitions between microscopic images, enabling enhanced visualization and analysis of cellular structures. This approach facilitates the generation of intermediate images to aid interpretation in biological and clinical applications.
+MiMorph is a toolkit for generating smooth transitions between microscopic images, enhancing visualization and analysis of cellular structures. It uses advanced feature extraction and interpolation methods to create intermediate images, supporting research in biology and medicine.
 
 ## Project Status
 
-🚧 **Work in Progress**  
-This project is currently under development. Some functionalities may not be fully implemented yet.
+🚧 **Under Active Development**  
+Core features are being implemented. Expect frequent updates and new functionalities.
 
 ## Table of Contents
 
-- [About](#about)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Examples](#examples)
+- [Overview](#overview)
+- [Quick Start](#quick-start)
+- [Features](#features)
 - [Contributing](#contributing)
 - [License](#license)
 
-## About
+## Overview
 
-**MiMorph** focuses on:
-- Extracting key features from microscopic images.
-- Generating smooth transitions between images.
-- Supporting biological and clinical research by improving the visual interpretation of cellular structures.
+**MiMorph** enables:
+- Extraction of meaningful features from microscopy data.
+- Generation of smooth, interpretable transitions between images.
+- Improved visualization for biological and clinical workflows.
 
-This project aims to enhance the quality of microscopic image analysis by producing intermediary images that highlight progressive structural changes.
+The toolkit is designed to help researchers visualize progressive changes in cellular structures by producing intermediary images.
 
-## Installation
+## Quick Start
 
-> Requirements and installation instructions will be provided soon.
-
-For now, clone the repository:
+Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/mimorph.git
-cd mimorph
+git clone https://github.com/JGolaszewski/MiMorph.git
+cd MiMorp
 ```
 
-## Usage
+Install module using python package manager:
 
-> Detailed usage examples and command-line options will be added as the project evolves.
+```bash
+python -m pip install .
+```
 
-Currently, the project includes preliminary data exploration tools for microscopic images.
+*(Optional)* Install dependencies:
+```bash
+python -m pip install -r requirements.txt
+```
 
-## Examples
+## Features
 
-Here are some early examples of what MiMorph can generate:
+- Feature extraction from WSI microscopy formats
+- Image interpolation and transition generation
 
-- Initial feature extraction from sample datasets
-- Early-stage transition mapping between images
+## Contributing
 
-More detailed examples and visualizations will be provided in future updates.
+Contributions are welcome! Please see the [CONTRIBUTING](CONTRIBUTING.md) guide for details.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Licensed under the MIT License. See [LICENSE](LICENSE) for more information.

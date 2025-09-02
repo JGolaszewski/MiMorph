@@ -1,0 +1,41 @@
+{
+    "score": [
+        291.1449478901522,
+        0.803427922973205,
+        0.7776569871850416
+    ],
+    "params": {
+        "num_bins": 37,
+        "metric_sampling_percentage": 0.6985501483035063,
+        "metric_use_gradient": false,
+        "coarse_iterations": 32,
+        "coarse_tol": 1.461240880712529e-05,
+        "coarse_max_corrections": 4,
+        "coarse_max_func_evals": 67,
+        "coarse_cost_factor": 1595996.669686875,
+        "fine_iterations": 112,
+        "fine_tol": 1.8210384453906514e-06,
+        "fine_max_corrections": 3,
+        "fine_max_func_evals": 240,
+        "fine_cost_factor": 376161778.43149877,
+        "fine_metric_sampling_percentage": 0.626743295458134,
+        "blur_sigma": 3.1222499805732813,
+        "shrink_factors": [
+            8
+        ],
+        "smoothing_sigmas": [
+            2.5
+        ],
+        "coarse_grid_spacing": [
+            10,
+            10
+        ],
+        "fine_grid_spacing": [
+            32,
+            32
+        ],
+        "spline_order": 3,
+        "metric_sampling_strategy": "RANDOM",
+        "initial_transform": null
+    }
+}
