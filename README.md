@@ -30,7 +30,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/JGolaszewski/MiMorph.git
-cd MiMorp
+cd MiMorph
 ```
 
 Install module using python package manager:
